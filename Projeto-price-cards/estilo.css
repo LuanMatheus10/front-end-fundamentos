@@ -26,6 +26,7 @@ body{
     font-size: 36px;
     text-transform: uppercase;
     margin-left: 16px;
+    letter-spacing: 2px;
 }
 
 .header__nav ul{
@@ -42,7 +43,72 @@ body{
     border-radius: 10%;
 }
 
+.header__nav a:hover{
+    text-decoration: underline;
+}
+
 a.header__nav--active{
     background-color: #cbe300;
     color: #0c1014;
+    pointer-events: none;
 }
+
+.section{
+    display: flex;
+    gap: 16px;
+}
+
+.div-plan {
+    flex: 1;
+    background-color: #1f262c;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 12px 4px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-plan__title{
+    text-transform: uppercase;
+    border-bottom: 2px solid #cbe300;
+    margin-top: 0;
+    padding-bottom: 12px;
+    letter-spacing: 2px;
+}
+
+.span-plan p{
+    margin-top: 0;
+}
+
+.span-plan{
+    font-size: 33px;
+}
+
+.list{
+    margin: 0 0 35px;
+    color: #b5b5b5;
+    padding-left: 16px;
+    line-height: 1.8;
+    flex-grow: 1;
+}
+.list li::marker{
+    color: #cbe300;
+}
+
+.botao{
+    font-weight: bold;
+    text-align: center;
+    color: #0c1014;
+    background-color: #cbe300;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+a:hover{
+    background-color: #05080a;
+    color: white;
+}
+
