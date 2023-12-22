@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif,'Ubuntu', sans-serif;
+    color: #555;
+}
+
+
+.div-header{
+    background-color: #162028;
+    display: flex;
+}
+
+.lista{
+    display: inline-block;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 8px;
+    margin-left: 26em;
+    gap: 5em;
+    display: flex;
+    align-items: center;
+    
+}
+
+.title{
+    font-family: 'Viaoda Libre', serif;
+    font-size: 2.7em;
+    color: white;
+    margin-left: 5em;
+    text-align:left;
+    display: inline-block;
+    
+}
+
+.div-header-foto{
+    height: 46em;
+    background-position: left center;
+    padding-top: 0;
+}
+
+section h1{
+    
+    font-size: 3em;
+    text-align: center;
+}
+
+
+
