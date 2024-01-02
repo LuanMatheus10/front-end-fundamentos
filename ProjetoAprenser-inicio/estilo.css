@@ -62,6 +62,13 @@ nav a{
     color: #fafafa;
 }
 
+.fixed{
+    position:sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 .container{
     max-width: 127.6rem;
     margin: auto;
@@ -162,5 +169,24 @@ nav a{
 .escola_title{
     font-size: 3.2rem;
     margin-top: 2rem;
+}
+
+.title_contatos{
+    font-size: 3.2rem;
+    text-align: center;
+    margin: 6.0rem;
+}
+
+address{
+    font-size: 1.8rem;
+    text-align: right;
+    margin: 4rem;
+    font-style: normal;
+}
+
+.footer{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 3rem;
 }
 
