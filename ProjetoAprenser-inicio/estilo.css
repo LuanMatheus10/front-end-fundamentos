@@ -152,3 +152,15 @@ nav a{
     border-top: transparent;
 }
 
+.escola{
+ display: flex;
+ gap: 7rem;
+ line-height: 1.7;
+ padding-top: 6rem;
+}
+
+.escola_title{
+    font-size: 3.2rem;
+    margin-top: 2rem;
+}
+
