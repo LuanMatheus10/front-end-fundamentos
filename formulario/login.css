@@ -53,3 +53,11 @@ legend{
     font-size: 1.2em;
     margin-bottom: .5em;
 }
+
+.btn{
+    width: fit-content;
+    margin-left: auto;
+    background-color: rgb(25, 25, 121);
+    color: white;
+    cursor: pointer;
+}
