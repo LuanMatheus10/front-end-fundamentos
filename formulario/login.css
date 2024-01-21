@@ -1,6 +1,6 @@
 html{
     background-color: #95a5a6;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
@@ -50,7 +50,7 @@ legend{
     text-align: center;
     font-weight: bold;
     color: #454e4f;
-    font-size: 1.2em;
+    font-size: 1em;
     margin-bottom: .5em;
 }
 
@@ -60,4 +60,19 @@ legend{
     background-color: rgb(25, 25, 121);
     color: white;
     cursor: pointer;
+}
+
+.btn2{
+    background-color: rgb(25, 25, 121);
+    color: white;
+    cursor: pointer;
+}
+
+.actions{
+    display: flex;
+    gap: 1em;
+}
+
+.btn--apagar{
+    background-color: rgb(121, 25, 25);
 }
