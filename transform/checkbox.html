@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Checkbox</title>
+
+    <style>
+        /*ESSA É A MANEIRA INCORRETA DE ESCONDER O CHECKBOX (display: none)*/
+        .chk1{
+            display: none;
+        }
+
+        .chk1+label span{
+            display: inline-block;
+            font-size: 20px;
+            background-color: red;
+            width: 1em;
+            height: 1em;
+        }
+        
+        .chk1:checked+label span{
+            background-color: blue;
+            position: relative;
+        }
+
+        .chk1:checked + label span::before{
+           content: "";
+           display: block;
+           border: .087em solid white;
+           position: absolute;
+           top: .077em;
+           left: .38em;
+           right: .3em;
+           bottom: .3em;
+           transform: rotate(45deg);
+           border-left-color: transparent;
+           border-top-color: transparent;
+        } 
+    
+        .lbl2 span{
+            display: inline-block;
+            font-size: 20px;
+            background-color: red;
+            width: 1em;
+            height: 1em;
+            position: relative;
+            transition: background-color .2s;
+        }
+        
+        .lbl2 input[type=checkbox]:checked + span{
+            background-color: blue;
+        }
+
+        .lbl2 input[type=checkbox]+span::before{
+            content: "";
+            display: block;
+            position: absolute;
+            border: .087em solid white;
+            position: absolute;
+            top: .077em;
+            left: .38em;
+            right: .3em;
+            bottom: .3em;
+            transform: rotate(45deg);
+            border-left-color: transparent;
+            border-top-color: transparent;
+            opacity: 0;
+            transition: all .2s;
+        }
+    
+        .lbl2 input[type=checkbox]:checked+span::before{
+            opacity: 1;
+        }
+        /* ESSA É A MANEIRA CORRETA DE ESCONDER O CHECKBOX*/
+        .lbl2 input[type=checkbox]{
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            outline: none;
+        }
+
+        .lbl2 input[type=checkbox]:focus+span{
+            outline: 2px solid black;
+            outline-offset: -1px;
+        }
+
+        .switch span{
+            display: inline-block;
+            width: 2em;
+            height: 1em;
+            border-radius: 1em;
+            background-color: #ebeeeb81;
+            outline: 1px solid #888;
+            overflow: hidden;
+            position: relative;
+        }
+        /*INSERINDO A BOLINHA CLICAVEL DENTRO DO SWITCH*/
+        .switch span::after{
+            content: "";
+            display: block;
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            background-color: #888;
+            transition: all .2s ease-in-out;
+            transform: translateX(0);
+            position: relative;
+            z-index: 1;
+        }
+        /*CRIANDO ANIMAÇÃO DA BOLINHA NO SWITCH ESQUERDA PARA DIREITA*/
+        .switch input:checked+span::after{
+            transform: translateX(100%);
+            background-color: #0ce60ce5;
+        }
+
+        .switch span::before{
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-color: #6ab6137d;
+            transform: translateX(-100%);
+            transition: transform .2s ease-in-out;
+            position: absolute;
+            z-index: 0;
+        }
+
+        .switch input:checked+span::before{
+            transform: translateX(0);
+        }
+
+        /* ESSA É A MANEIRA CORRETA DE ESCONDER O CHECKBOX*/
+        .switch input[type=checkbox]{
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            outline: none;
+        }
+
+        /*INCLUIR A INDICAÇÃO VISUAL NA TELA QUANDO NAVEGO PELO TECLADO USANDO O TAB*/
+        .switch input:focus+span{
+            outline: 2px solid black;
+            outline-offset: 2px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Checkbox</h1>
+
+    <input type="checkbox" id="html" checked class="chk1">
+    <label for="html">
+        <span></span>
+        HTML
+    </label>
+
+    <input type="checkbox" id="css" class="chk1">
+    <label for="css">
+        <span></span>
+        CSS
+    </label>
+
+    <input type="checkbox" id="js" class="chk1">
+    <label for="js">
+        <span></span>
+        Javascript
+    </label>
+
+    <hr>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        Javascript
+    </label>
+
+    <hr>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        Javascript
+    </label>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* a[href="#"]:not(.link-ok){
+    opacity: .2;
+}
+
+a[href^="http"]{
+    color: red;
+}
+
+a[href$=".pdf"]{
+    color: green;
+}
+
+a[target="_blanck"]{
+    text-decoration: none;
+}
+
+a[href$=".html"]{
+    background-color: yellow;
+    font-weight: 600;
+} */
+
+a[href="#"]:not(.link-ok){
+    background-color: yellow;
+    font-weight: 600;
+}
+
+a[href^="https"]{
+    color: green;
+}
+
+a[href$=".pdf"]{
+    font-size: 28px;
+}
+
+a[href$=".html"]{
+    background-color: blue;
+    color: white;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Transform</title>
+
+    <style>
+        body{
+            margin-bottom: 100vh;
+        }
+        div{
+            outline: 1px solid #888;
+            width: 80%;
+            height: 200px;
+            margin: .5em auto;
+        }
+
+        p{
+            width: 100%;
+        }
+
+        .destaque{
+            background-color: yellow;
+        }
+
+        .div1 .destaque{
+            transform: translate(50%);
+        }
+
+        .div2 .destaque{
+            position: relative;
+            left: 25%;
+            top: 100%;
+        }
+
+        .div3 .destaque{
+            transform: rotate(30deg);
+        }
+
+        .div4 .destaque{
+            transform: scale(.5, 2);
+        }
+
+        .div5 .destaque{
+            transform: skew(25deg);
+        }
+
+        .div6 .destaque{
+            transform: translate(0) rotate(30deg);
+            transform-origin: left bottom;
+        }
+
+        .div7 .destaque{
+            transform: rotate(45deg) translate(100px);
+            transform-origin: left bottom;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+    </div>
+
+    <div class="div3">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+    </div>
+
+    <div class="div4">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+    </div>
+
+    <div class="div5">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+    </div>
+
+    <div class="div6">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+    </div>
+
+    <div class="div7">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p class="destaque">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, totam.</p>
+    </div>
+</body>
+</html>

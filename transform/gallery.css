@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+/*DISPLAY BLOCK NA 'IMG' É USADO PARA TORNAR A IMAGEM UM ELEMENTO EM BLOCO E NÃO TER ESPAÇO ABAIXO DA FOTO*/
+img{
+    max-width: 100%;
+    display: block;
+}
+/*JUSTIFY-CONTENT: SPACE-BETWEEN USAMOS PARA DISTRIBUIR OS ESPAÇOS SOBRANDO NA FALERIA*/
+.gallery{
+   width: 60rem;
+   display: flex;
+   gap: .5rem;
+   flex-wrap: wrap;
+   background-color: white;
+   justify-content: space-between;
+   padding: .5em;
+   box-shadow: 0 0 14px rgba(0, 0, 0, .5);
+}
+/*PARA TRABALHAR NA LARGURA DOS ELEMENTOS DENTRO DA GALERIA (IMAGENS) USAMOS FLEX BASIS: CALC () PARA SUBTRAIR AS UNIDADES DE MEDIDA DOS ELEMENTOS*/
+.gallery .image{
+    flex-basis: calc(25% - .5em);
+    position: relative;     
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.image a{
+    text-decoration: none;
+}
+/*transition: .3s FAZER A TRANSIÇÃO DO ELEMENTO P ESCONDIDO APARECER DE MANEIRA SUTIL*/
+.gallery p{
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+    text-transform: uppercase;
+    padding: 1em;
+    letter-spacing: 2px;
+    font-size: .75em;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: .2;
+    transform: translateY(100%);
+    transition: all .3s;
+}
+
+.image:hover p{
+    opacity: 1;
+    transform: translateY(0);
+}
+/*transform: scale(1) UTILIZADA PARA ANIMAR A IMAGEM NA GALERIA - A TRANSITION SERVE PARA CALCULAR O TEMPO QUE A ANIMAÇÃO VAI SER EXECUTADA*/
+.image img{
+    transform: scale(1);
+    transition: transform .5s ease-in-out;
+}
+/*transform: scale(1.2) COM O SCALE ANIMO A IMAGEM QUANDO PASSO O MOUSE SOBRE O ELEMENTO NA TELA*/
+.image:hover img{
+    transform: scale(1.2);
+}
+/*INSET - É UM ATALHO PARA 'TOP, RIGHT, BOTTON E LEFT'*/
+.image::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    inset: 0;
+    opacity: .5;
+    pointer-events: none;
+    transition: opacity .5s ease-in-out;
+}
+
+.image:hover::after{
+    opacity: 0;
+}

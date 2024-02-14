@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+  
+    <title>Pseudo-elementos</title>
+
+    <style>
+      p a{
+        color: red;
+        background-color: yellow;
+      }
+
+      p:has(.teste) {
+        background-color: #ccc;
+      }
+
+      table{
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 24px;
+      }
+
+      th, td{
+        border-bottom: 1px solid #ddd;
+        padding: .5em;
+      }
+
+      th{
+        background-color: #f2f2f2;
+        text-align: left;
+      }
+
+      tr:nth-child(even){
+        background-color: #f9f9f9;
+      }
+
+     tr:hover{
+        background-color: #e9e9e9;
+     }
+
+     /*CLICAR NO CHECKBOX E A LINHA MUDA DE COR AO CLICAR*/
+     tr:has(input[type="checkbox"]:checked){
+        background-color: #aaffaa;
+     }
+
+    </style>
+</head>
+<body>
+
+    <table>
+        <caption>Desafio tabela</caption>
+
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th>E-mail</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td> <input type="checkbox"></td>
+                <td>Luan Matheus</td>
+                <td>luanksl1@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox"></td>
+                <td>Luan Matheus</td>
+                <td>luanksl1@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox"></td>
+                <td>Luan Matheus</td>
+                <td>luanksl1@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox"></td>
+                <td>Luan Matheus</td>
+                <td>luanksl1@gmail.com</td>
+            </tr>
+
+            <tr>
+                <td> <input type="checkbox"></td>
+                <td>Luan Matheus</td>
+                <td>luanksl1@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugiat vero temporibus ex sed itaque, blanditiis voluptatem doloremque sunt iusto quas.<a href="#">Clique aqui para saber mais</a> Reprehenderit, quisquam alias laboriosam perferendis excepturi possimus culpa veritatis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugiat vero temporibus ex sed itaque, blanditiis voluptatem doloremque sunt iusto quas. Reprehenderit, quisquam alias laboriosam perferendis <a href="#" class="teste">Clique aqui para saber mais</a>excepturi possimus culpa veritatis?</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugiat vero temporibus ex sed itaque, blanditiis voluptatem doloremque sunt iusto quas. Reprehenderit, quisquam alias laboriosam perferendis excepturi possimus culpa veritatis?</p>
+    
+
+
+</body>
+</html>
