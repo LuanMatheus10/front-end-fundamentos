@@ -20,6 +20,10 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     min-height: 100vh;
     line-height: 1.7;
+    background-image: url(../imagens/bg-unsplash.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -209,6 +213,12 @@ select{
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
+    padding: .8em 1.2em;
+    border-radius: 5px;
+}
+
+.btn + .btn{
+    margin-left: 2rem;
 }
 
 .btn:hover, .btn:focus{
@@ -217,4 +227,53 @@ select{
 
 .btn-stroke{
     background-color: transparent;
+}
+
+.btn-big{
+    font-size: 1.6rem;
+}
+
+.btn-full{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-full+.btn-full{
+    margin-left: 0;
+    margin-top: 2rem;
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td:last-child,
+.table th:last-child{
+    text-align: right;
+}
+
+.table td,
+.table th{
+    padding: 1.6rem;
+}
+
+.table:not(.table-alternate) td,
+.table:not(.table-alternate) th{
+    border-bottom: 2px solid var(--secondary-color-dark);
+}
+
+.table th{
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.table-alternate tbody tr:nth-child(odd){
+    background-color: var(--secondary-color);
+}
+
+.table-verticalLines td:not(:last-child),
+.table-verticalLines th:not(:last-child){
+    border-right: 1px solid var(--secondary-color-dark);
 }
