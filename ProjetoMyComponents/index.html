@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/brands.css">
+    
+    <link rel="stylesheet" href="assets/icomoon-svg/style.css">
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilo.css">
 
@@ -15,6 +18,37 @@
             fill: green;
         }
 
+        .fa-brands{
+            font-size: 4rem;
+            color: var(--primary-color);
+        }
+
+        .icon{
+            width: 4rem;
+            height: 4rem;
+            fill: var(--primary-color);
+        }
+
+        .link-icon{
+            display: inline-block;
+            margin-right: 3rem;
+            transition: color .2s;
+            font-style: normal;
+            text-decoration: none;
+        }
+
+        .link-icon svg{
+            width: 3rem;
+            height: 3rem;
+            fill: currentColor;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .link-icon:hover{
+            color: var(--primary-color);
+        }
     </style>
 </head>
 <body>
@@ -51,10 +85,22 @@
             <h3>Venha conhecer nossas redes sociais</h3>
 
             <p>
-                <a href="#">Youtube</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">Linkedin</a>
+                <a href="#" class="link-icon">
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-youtube"></use>
+                    </svg>Youtube</a>
+                <a href="#" class="link-icon">
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-instagram"></use>
+                    </svg>Instagram</a>
+                <a href="#" class="link-icon">
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-twitter"></use>
+                    </svg>Twitter</a>
+                <a href="#" class="link-icon">
+                    <svg>
+                        <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>Linkedin</a>
             </p>
         </address>
 
@@ -78,6 +124,16 @@
 
         <br>
         <p>Aqui está o link usando o font-awesome v6 <i class="fa-brands fa-twitter"></i></p>
+
+        <hr>
+
+        <p>Aqui está um icone usando svg externo do iconmoon
+
+            <svg class="icon">
+                <use xlink:href="assets/icomoon-svg/symbol-defs.svg#icon-twitter"></use>
+            </svg>
+        </p>
+        
     </main>
 </body>
 </html>
