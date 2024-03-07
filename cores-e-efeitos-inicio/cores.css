@@ -1,3 +1,170 @@
+:root{
+    --primary-color: #e10f0f
+}
+
 body {
     font-family: sans-serif;
+    background-image: linear-gradient(to top, rgb(0 0 255 / .9) 50%, red), url(imagens/tile.png);
+    background-attachment: fixed, scroll;
+    background-blend-mode: color;
+}
+
+.cores{
+    --color: color-mix(in srgb, var(--primary-color), transparent 40%);
+    width: 80%;
+    border: 8px dashed var(--color);
+    margin: 20px auto;
+    padding: 26px;
+}
+
+.cores p{
+    margin: 0;
+}
+/*COUNTER-RESET - INSERINDO UM CONTADOR NA MINHA PAGINA*/
+section{
+    counter-reset: contador;
+}
+/*COUNTER-INCREMENT - APLICADO NA CLASSE QUE QUERO NUMERAR COMO CONTAGEM*/
+.cores{
+    counter-increment: contador;
+}
+/*CLASSE + ::BEFORE - PARA DAR FUNÇÃO AO CONTADOR USANDO O 'CONTENT' */
+.cores::before{
+    content: " [ " counter(contador) " ] ";
+    display: inline-block;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.cores:nth-child(2){
+    background-color: blue;
+    background-clip: content-box;
+}
+/*hsl(GRAUS, SATURAÇÃO, COR MAIS PURA) - HSL= VARIAÇÃO DE TONALIDADES DA MESMA COR*/
+
+/* 'INSET' SERVE PARA COLOCAR A SOMBRA DENTRO DO BOX*/
+.cores:nth-child(3){
+    background-color: hsl(100deg, 100%, 80%);
+    box-shadow:  10px 10px 6px hsl(100deg, 100%, 30%) inset;
+}
+/*POSSO USAR A VARIAÇÃO NO HOVER COM A MESMA COR ESCOLHIDA NO MEU ELEMENTO ACIMA*/
+.cores:nth-child(3):hover{
+    background-color: hsl(85deg, 100%, 50%);
+}
+/* 'linear-gradient' SERVE PARA TRABALHAR COM AS CORES NOS ELEMENTOS "COMO UM DEGRADÊ" MISTURANDO AS CORES LISTADAS
+ é uma função CSS que permite criar transições suaves de uma cor para outra ao longo de uma linha reta.*/
+.cores:nth-child(4){
+    background-image: linear-gradient(70deg, blue, transparent), linear-gradient(to top, red, transparent);
+    background-clip: padding-box;
+}
+/*'radial-gradient' - É BEM PARECIDO COM 'LINEAR-GRADIENTE' TAMBEM SE UTILIZA COM BACKGROUND-IMAGE*/
+.cores:nth-child(5){
+    background-image: radial-gradient(blue 30%, #f008, green 50%, yellow);
+}
+
+.cores:nth-child(6){
+    background-image: radial-gradient(circle, blue 30%, #f008, green 50%, yellow);
+}
+
+.cores:nth-child(7){
+    background-image: radial-gradient(circle, blue, #f008, green, yellow);
+}
+
+.cores:nth-child(8){
+    background-image: radial-gradient(circle at bottom, blue, #f008);
+}
+
+.cores:nth-child(9){
+    background-image: radial-gradient(ellipse at 50px 20px, blue, #f008 20%);
+}
+/* 'closest-corner' SERVE PARA FIXAR MINHA ELIPSE NO CANTO MAIS PROXIMO*/
+.cores:nth-child(10){
+    background-image: radial-gradient(closest-corner at 50px 20px, blue, #f008);
+}
+/* 'farthest-corner' SERVE PARA EXPANDIR MINHA ELIPSE PARA O CANTO MAIS DISTANTE*/
+.cores:nth-child(11){
+    background-image: radial-gradient(farthest-corner at 50px 20px, blue, #f008);
+}
+/* 'closest-side' SERVE PARA EXPANDIR PARA O LADO MAIS PRÓXIMO DA ELIPSE*/
+.cores:nth-child(12){
+    background-image: radial-gradient(closest-side at 50px 20px, blue, #f008);
+}
+/* 'farthest-side' SERVE PARA EXPANDIR PARA O LADO MAIS DISTANTE DA ELIPSE*/
+.cores:nth-child(13){
+    background-image: radial-gradient(farthest-side at 50px 20px, blue, #f008);
+}
+
+.cores:nth-child(14){
+    background-image: radial-gradient(circle farthest-side at 50px 20px, blue, #f008);
+}
+
+.cores:nth-child(14){
+    background-image: radial-gradient(circle farthest-side at 50px 20px, blue, #f008);
+}
+
+.cores:nth-child(15){
+    background-image: radial-gradient(circle farthest-side at 50px 20px, #00f8, #f008),
+    radial-gradient(circle farthest-corner at bottom right, yellow, transparent);
+}
+
+.cores:nth-child(16){
+    background-image: radial-gradient(at top, #00f8, #f008),
+    radial-gradient(at bottom, yellow, transparent);
+}
+/*'conic-gradient' PODEMOS TRABALHAR COM VARIAS CORES E COM GRAUS USANDO A PALAVRA 'FROM'*/
+.cores:nth-child(17){
+    background-image: conic-gradient(from 45deg, red 50%, blue, green);
+}
+
+.cores:nth-child(18){
+    background-image: conic-gradient(#f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+    transition: filter 5s linear;
+    aspect-ratio: 16/ 9;
+}
+
+.cores:nth-child(18):hover{
+    filter: hue-rotate(10turn);
+}
+
+.cores:nth-child(19){
+    background-image: repeating-linear-gradient(to top right, white 0px, white 5px, black 5px, black 10px);
+}
+
+.cores:nth-child(20){
+    background-image: repeating-radial-gradient(orange 15px, aqua 55px, black 40px, green 25px);
+}
+
+.cores:nth-child(21){
+    background-image: repeating-conic-gradient(yellow 15deg, aqua 55deg, black 40deg,  25deg, pink 60deg);
+}
+
+.cores:nth-child(22){
+    background-image: repeating-conic-gradient(transparent 0deg, transparent 10deg, black 10deg, black 20deg), 
+    repeating-radial-gradient(red 0%, transparent, blue 20%);
+    background-attachment: fixed, scroll;
+}
+
+.cores:nth-child(23){
+    background-image:
+    repeating-radial-gradient(red 0%, transparent, blue 20%),
+    repeating-linear-gradient(red, blue);    
+    background-attachment: scroll, fixed;
+}
+
+.cores:nth-child(24) {
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, .8);
+}
+
+.cores:nth-child(25) {
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .8));
+}
+
+.cores:nth-child(26){
+    background-image: linear-gradient(to top right, transparent 50%, red 50%);
+    box-shadow: 10px 10px 6px rgba(0, 0, 0, .8);
+}
+
+.cores:nth-child(27){
+    background-image: linear-gradient(to top right, transparent 50%, red 50%);
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, .8));
 }
